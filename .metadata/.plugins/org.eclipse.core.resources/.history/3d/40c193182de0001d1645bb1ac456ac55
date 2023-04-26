@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+class Student{
+	int Roll;
+	String Name;
+	double DSA_Mark;
+	void getdata() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter your Roll Number : ");
+		Roll = sc.nextInt();
+		System.out.print("Enter your Name : ");
+		Name = sc.nextLine();
+		sc.nextLine();
+		System.out.print("Enter your DSA Marks : ");
+		DSA_Mark = sc.nextDouble();
+	}
+	void showdata() {
+		System.out.println("Student Details :\nName : " + Name + "\nRoll Number : " + Roll + "\nMarks in DSA : " + DSA_Mark);
+	}
+}
+public class Q3 {
+
+	public static void main(String[] args) {
+		Student s1 = new Student();
+		Student s2 = new Student();
+		Student s3 = new Student();
+		Student s4 = new Student();
+		Student s5 = new Student();
+		
+		s1.getdata();
+		s2.getdata();
+		s3.getdata();
+		s4.getdata();
+		s5.getdata();
+		
+		
+	
+		}
+	
+
+}

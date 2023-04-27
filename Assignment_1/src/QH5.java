@@ -13,10 +13,37 @@ public class QH5 {
             }
             System.out.println();
         }
+        int maxRow = 0;
+        int maxRowOnes = 0;
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                
+            int rowOnes = 0;
+            for (int j = 0; j < arr[0].length; j++) {
+                if (arr[i][j] == 1) {
+                    rowOnes++;
+                }
+            }
+            if (rowOnes > maxRowOnes) {
+                maxRow = i;
+                maxRowOnes = rowOnes;
             }
         }
+        System.out.println("Row with the most 1s: " + maxRow);
+
+        // Find the first column with the most 1s
+        int maxCol = 0;
+        int maxColOnes = 0;
+        for (int j = 0; j < arr[0].length; j++) {
+            int colOnes = 0;
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i][j] == 1) {
+                    colOnes++;
+                }
+            }
+            if (colOnes > maxColOnes) {
+                maxCol = j;
+                maxColOnes = colOnes;
+            }
+        }
+        System.out.println("Column with the most 1s: " + maxCol);
     }
 }

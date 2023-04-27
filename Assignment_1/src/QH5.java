@@ -28,8 +28,6 @@ public class QH5 {
             }
         }
         System.out.println("Row with the most 1s: " + maxRow);
-
-        // Find the first column with the most 1s
         int maxCol = 0;
         int maxColOnes = 0;
         for (int j = 0; j < arr[0].length; j++) {
